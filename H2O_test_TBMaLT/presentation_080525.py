@@ -28,12 +28,7 @@ def H2O_scc(device):
             [0.965, 0.075, 0.088],
             [1.954, 0.047, 0.056],
             [2.244, 0.660, 0.778]],
-            device=device),
-        torch.tensor([
-            [4.0, 0.0, 0.0],
-            [0.0, 5.0, 0.0],
-            [0.0, 0.0, 6.0]],
-            device=device), units='a',
+            device=device),units='a',
         cutoff = cutoff / length_units['angstrom'])
 
     orbs = OrbitalInfo(geometry.atomic_numbers, {1: [0], 8: [0, 1]})
@@ -42,7 +37,7 @@ def H2O_scc(device):
 
 if __name__ == "__main__":
     parameter_url = "https://github.com/dftbparams/mio/releases/download/v1.1.0/mio-1-1.tar.xz"
-    file_path = "mio.hdf5"  # Save as HDF5 file
+    file_path = "mio.h5"  # Save as HDF5 file
     print(f"Downloading DFTB parameter set to {file_path}...")
     download_dftb_parameter_set(parameter_url, file_path)
     print(f"Downloaded DFTB parameter set to {file_path}")
