@@ -55,3 +55,6 @@ if __name__ == "__main__":
 
     total_energy = calculator.total_energy
     print('Total energy:', total_energy)
+
+    q_final_atomic = calculator.q_final_atomic
+    print('Q Final Atomic:', q_final_atomic)
