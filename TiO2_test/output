@@ -1,0 +1,163 @@
+|===============================================================================
+|
+|  DFTB+ release 24.1
+|
+|  Copyright (C) 2006 - 2024  DFTB+ developers group
+|
+|===============================================================================
+|
+|  When publishing results obtained with DFTB+, please cite the following
+|  reference:
+|
+|  * DFTB+, a software package for efficient approximate density functional
+|    theory based atomistic simulations, J. Chem. Phys. 152, 124101 (2020).
+|    [doi: 10.1063/1.5143190]
+|
+|  You should also cite additional publications crediting the parametrization
+|  data you use. Please consult the documentation of the SK-files for the
+|  references.
+|
+|===============================================================================
+
+Reading input file 'dftb_in.hsd'
+Parser version: 14
+
+--------------------------------------------------------------------------------
+***  Converting input from parser version 12 to parser version 14 ...
+***  Done.
+
+Reading SK-files:
+../recipes/slakos/mio-ext/Ti-Ti.skf
+../recipes/slakos/mio-ext/Ti-O.skf
+../recipes/slakos/mio-ext/O-O.skf
+Done.
+
+
+Processed input in HSD format written to 'dftb_pin.hsd'
+
+Starting initialization...
+--------------------------------------------------------------------------------
+WARNING!
+-> Dipole printed for extended system : value printed is not well defined
+Chosen random seed:          5331352
+Current stacksize:           8 [Mb] (recommended: unlimited)
+WARNING!
+-> Current stacksize not set to unlimited or hard limit, which might cause
+   random crashes (e.g. segmentation faults). It is advised to unlimit the
+   stacksize by issuing 'ulimit -s unlimited' (Linux) or setting it to the 
+   hard limit by 'ulimit -s hard' (Mac) in advance.
+Mode:                        Static calculation
+Self consistent charges:     Yes
+SCC-tolerance:                 0.100000E-04
+Max. scc iterations:                    100
+Shell resolved Hubbard:      No
+Spin polarisation:           No
+Nr. of up electrons:            16.000000
+Nr. of down electrons:          16.000000
+Periodic boundaries:         Yes
+Electronic solver:           Relatively robust
+Mixer:                       Broyden mixer
+Mixing parameter:                  0.200000
+Maximal SCC-cycles:                     100
+Nr. of chrg. vec. in memory:            100
+Electronic temperature:              0.100000E-07 H      0.272114E-06 eV
+Initial charges:             Set automatically (system chrg:   0.000E+00)
+Included shells:            Ti:  s, p, d
+                             O:  s, p
+K-points and weights:           1:  0.125000  0.125000  0.125000     0.031250
+                                2:  0.125000  0.125000  0.375000     0.031250
+                                3:  0.125000  0.125000  0.625000     0.031250
+                                4:  0.125000  0.125000  0.875000     0.031250
+                                5:  0.125000  0.375000  0.125000     0.031250
+                                6:  0.125000  0.375000  0.375000     0.031250
+                                7:  0.125000  0.375000  0.625000     0.031250
+                                8:  0.125000  0.375000  0.875000     0.031250
+                                9:  0.125000  0.625000  0.125000     0.031250
+                               10:  0.125000  0.625000  0.375000     0.031250
+                               11:  0.125000  0.625000  0.625000     0.031250
+                               12:  0.125000  0.625000  0.875000     0.031250
+                               13:  0.125000  0.875000  0.125000     0.031250
+                               14:  0.125000  0.875000  0.375000     0.031250
+                               15:  0.125000  0.875000  0.625000     0.031250
+                               16:  0.125000  0.875000  0.875000     0.031250
+                               17:  0.375000  0.125000  0.125000     0.031250
+                               18:  0.375000  0.125000  0.375000     0.031250
+                               19:  0.375000  0.125000  0.625000     0.031250
+                               20:  0.375000  0.125000  0.875000     0.031250
+                               21:  0.375000  0.375000  0.125000     0.031250
+                               22:  0.375000  0.375000  0.375000     0.031250
+                               23:  0.375000  0.375000  0.625000     0.031250
+                               24:  0.375000  0.375000  0.875000     0.031250
+                               25:  0.375000  0.625000  0.125000     0.031250
+                               26:  0.375000  0.625000  0.375000     0.031250
+                               27:  0.375000  0.625000  0.625000     0.031250
+                               28:  0.375000  0.625000  0.875000     0.031250
+                               29:  0.375000  0.875000  0.125000     0.031250
+                               30:  0.375000  0.875000  0.375000     0.031250
+                               31:  0.375000  0.875000  0.625000     0.031250
+                               32:  0.375000  0.875000  0.875000     0.031250
+
+K-points in absolute space:     1:  0.034751  0.034751  0.013597
+                                2:  0.069502  0.069502  0.013597
+                                3:  0.104252  0.104252  0.013597
+                                4:  0.139003  0.139003  0.013597
+                                5:  0.069502  0.034751  0.027195
+                                6:  0.104252  0.069502  0.027195
+                                7:  0.139003  0.104252  0.027195
+                                8:  0.173754  0.139003  0.027195
+                                9:  0.104252  0.034751  0.040792
+                               10:  0.139003  0.069502  0.040792
+                               11:  0.173754  0.104252  0.040792
+                               12:  0.208505  0.139003  0.040792
+                               13:  0.139003  0.034751  0.054389
+                               14:  0.173754  0.069502  0.054389
+                               15:  0.208505  0.104252  0.054389
+                               16:  0.243256  0.139003  0.054389
+                               17:  0.034751  0.069502  0.027195
+                               18:  0.069502  0.104252  0.027195
+                               19:  0.104252  0.139003  0.027195
+                               20:  0.139003  0.173754  0.027195
+                               21:  0.069502  0.069502  0.040792
+                               22:  0.104252  0.104252  0.040792
+                               23:  0.139003  0.139003  0.040792
+                               24:  0.173754  0.173754  0.040792
+                               25:  0.104252  0.069502  0.054389
+                               26:  0.139003  0.104252  0.054389
+                               27:  0.173754  0.139003  0.054389
+                               28:  0.208505  0.173754  0.054389
+                               29:  0.139003  0.069502  0.067986
+                               30:  0.173754  0.104252  0.067986
+                               31:  0.208505  0.139003  0.067986
+                               32:  0.243256  0.173754  0.067986
+
+Extra options:
+                             Mulliken analysis
+
+--------------------------------------------------------------------------------
+
+***  Geometry step: 0
+
+ iSCC Total electronic   Diff electronic      SCC error    
+    1    0.00000000E+00    0.00000000E+00    0.13401703E+01
+    2   -0.16241463E+02   -0.16241463E+02    0.97300343E+00
+    3   -0.16249535E+02   -0.80727802E-02    0.21007057E-01
+    4   -0.16258920E+02   -0.93843114E-02    0.56996383E-03
+    5   -0.16258924E+02   -0.46131508E-05    0.20513343E-05
+>> Charges saved for restart in charges.bin
+
+Total Energy:                      -15.6210745499 H         -425.0711 eV
+Extrapolated to 0K:                -15.6210745499 H         -425.0711 eV
+Total Mermin free energy:          -15.6210745499 H         -425.0711 eV
+Force related energy:              -15.6210745499 H         -425.0711 eV
+
+
+--------------------------------------------------------------------------------
+DFTB+ running times                          cpu [s]             wall clock [s]
+--------------------------------------------------------------------------------
+Global initialisation                  +       0.00 (  0.3%)       0.01 (  7.7%)
+Pre-SCC initialisation                 +       0.01 (  1.5%)       0.01 (  3.3%)
+SCC                                    +       0.75 ( 83.3%)       0.15 ( 81.3%)
+--------------------------------------------------------------------------------
+Missing                                +       0.13 ( 14.8%)       0.01 (  7.7%)
+Total                                  =       0.90 (100.0%)       0.18 (100.0%)
+--------------------------------------------------------------------------------

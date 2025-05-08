@@ -1,0 +1,75 @@
+ Fermi distribution function
+
+Geometry optimization step: 9
+
+
+********************************************************************************
+ iSCC Total electronic   Diff electronic      SCC error    
+    3   -0.41505940E+01   -0.60769167E-11    0.66027184E-11
+********************************************************************************
+
+ Total charge:    -0.00000000
+
+ Atomic gross charges (e)
+ Atom           Charge
+    1      -0.59260702
+    2       0.29630351
+    3       0.29630351
+
+Nr. of electrons (up):      8.00000000
+Atom populations (up)
+ Atom       Population
+    1       6.59260702
+    2       0.70369649
+    3       0.70369649
+
+l-shell populations (up)
+ Atom Sh.   l       Population
+    1   1   0       1.73421608
+    1   2   1       4.85839094
+    2   1   0       0.70369649
+    3   1   0       0.70369649
+
+Orbital populations (up)
+ Atom Sh.   l   m       Population  Label
+    1   1   0   0       1.73421608  s
+    1   2   1  -1       1.68105131  p_y
+    1   2   1   0       1.17733963  p_z
+    1   2   1   1       2.00000000  p_x
+    2   1   0   0       0.70369649  s
+    3   1   0   0       0.70369649  s
+
+Fermi level:                         0.0700493319 H            1.9061 eV
+Band energy:                        -3.6725386873 H          -99.9349 eV
+TS:                                  0.0000000000 H            0.0000 eV
+Band free energy (E-TS):            -3.6725386873 H          -99.9349 eV
+Extrapolated E(0K):                 -3.6725386873 H          -99.9349 eV
+Input / Output electrons (q):      8.0000000000      8.0000000000
+
+Energy H0:                          -4.1689552805 H         -113.4430 eV
+Energy SCC:                          0.0183612644 H            0.4996 eV
+Total Electronic energy:            -4.1505940161 H         -112.9434 eV
+Repulsive energy:                    0.0726560835 H            1.9771 eV
+Total energy:                       -4.0779379326 H         -110.9663 eV
+Extrapolated to 0:                  -4.0779379326 H         -110.9663 eV
+Total Mermin free energy:           -4.0779379326 H         -110.9663 eV
+Force related energy:               -4.0779379326 H         -110.9663 eV
+
+Non-constrained calculation
+
+SCC converged
+
+Full geometry written in geom.out.{xyz|gen}
+
+Total Forces
+    1      0.000000000000     -0.000008377462      0.000000000000
+    2      0.000000000000      0.000004188731      0.000019992075
+    3     -0.000000000000      0.000004188731     -0.000019992075
+
+Maximal derivative component:        0.199921E-04 au
+
+Dipole moment:   -0.00000000    0.64283623    0.00000000 au
+Dipole moment:   -0.00000000    1.63392685    0.00000000 Debye
+
+Geometry converged
+
