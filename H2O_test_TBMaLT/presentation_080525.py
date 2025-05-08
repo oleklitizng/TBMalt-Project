@@ -25,11 +25,11 @@ def H2O_scc(device):
     cutoff = torch.tensor([9.98], device=device)
 
     geometry = Geometry(
-        torch.tensor([1, 8, 1], device=device),
+        torch.tensor([8,1,1], device=device),
         torch.tensor([
-            [-0.14200298, 0.77844804, 0.70369649],
-            [-0.71603315,    -0.00000000,     6.59260702],
-            [-0.14200298, -0.77844804, 0.70369649]],
+            [0.00000000, -0.71603315, -0.00000000],
+            [0.00000000, -0.14200298, 0.77844804 ],
+            [-0.00000000, -0.14200298, -0.77844804]],
             device=device),units='a')
 
     orbs = OrbitalInfo(geometry.atomic_numbers, {1: [0], 8: [0, 1]})
@@ -47,7 +47,7 @@ if __name__ == "__main__":
 
     h_feed, s_feed, o_feed, u_feed, r_feed = feeds_scc(device,file_path)
 
-    calculator = Dftb2(h_feed, s_feed, o_feed, u_feed, r_feed, filling_scheme=None)
+    calculator = Dftb2(h_feed, s_feed, o_feed, u_feed, r_feed)
 
     geometry, orbs = H2O_scc(device)
     energy = calculator(geometry, orbs)
