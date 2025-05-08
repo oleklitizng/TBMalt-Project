@@ -25,9 +25,9 @@ def H2O_scc(device):
     geometry = Geometry(
         torch.tensor([1, 8, 1], device=device),
         torch.tensor([
-            [0.965, 0.075, 0.088],
-            [1.954, 0.047, 0.056],
-            [2.244, 0.660, 0.778]],
+            [-0.14200298, 0.77844804, 0.70369649],
+            [-0.14200298, 0.77844804, 0.70369649],
+            [-0.14200298, -0.77844804, 0.70369649]],
             device=device),units='a',
         cutoff = cutoff / length_units['angstrom'])
 
