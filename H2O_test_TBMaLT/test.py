@@ -55,26 +55,28 @@ r_feed = RepulsiveSplineFeed.from_database(parameter_db_path, species)
 original_h = h_feed._on_sites["1"].clone()
 original_o = h_feed._on_sites["8"].clone()
 
-torch.manual_seed(4)  # Set random seed for reproducibility
+#torch.manual_seed(4)  # Set random seed for reproducibility
 
 # Create parameters directly in the on_sites dictionaries
 # For hydrogen (Z=1)
-h_onsite = h_feed._on_sites["1"].clone()
-h_onsite[0] = -torch.rand(1, dtype=torch.double, requires_grad=True)[0]  # x parameter
+#h_onsite = h_feed._on_sites["1"].clone()
+#h_onsite[0] = -torch.rand(1, dtype=torch.double, requires_grad=True)[0]  # x parameter
 #h_onsite[1:4] = -torch.rand(1, dtype=torch.double, requires_grad=True)[0].repeat(3)  # y parameter
-h_feed._on_sites["1"] = h_onsite
+#h_feed._on_sites["1"] = h_onsite
 
 # For oxygen (Z=8)
-o_onsite = h_feed._on_sites["8"].clone()
-o_onsite[0] = -torch.rand(1, dtype=torch.double, requires_grad=True)[0]  # a parameter
-o_onsite[1:4] = -torch.rand(1, dtype=torch.double, requires_grad=True)[0].repeat(3)  # b parameter
-h_feed._on_sites["8"] = o_onsite
+#o_onsite = h_feed._on_sites["8"].clone()
+#o_onsite[0] = -torch.rand(1, dtype=torch.double, requires_grad=True)[0]  # a parameter
+#o_onsite[1:4] = -torch.rand(1, dtype=torch.double, requires_grad=True)[0].repeat(3)  # b parameter
+#h_feed._on_sites["8"] = o_onsite
 
 # Get the parameter references for optimization
-params = []
-for key in h_feed._on_sites:
-    h_feed._on_sites[key].requires_grad_(True)
-    params.append(h_feed._on_sites[key])
+#params = []
+#for key in h_feed._on_sites:
+#    h_feed._on_sites[key].requires_grad_(True)
+#    params.append(h_feed._on_sites[key])
+
+
 
 # Create the DFTB calculator
 dftb_calculator = Dftb2(h_feed, s_feed, o_feed, u_feed, r_feed, filling_scheme=None)
