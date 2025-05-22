@@ -50,6 +50,11 @@ if __name__ == "__main__":
     calculator = Dftb2(h_feed, s_feed, o_feed, u_feed, r_feed)
 
     geometry, orbs = H2O_scc(device)
+
+    print(h_feed)
+    print(h_feed._on_sites["1"])
+    print(h_feed._on_sites["8"])
+
     energy = calculator(geometry, orbs)
     print('Energy:', energy)
 
@@ -58,3 +63,9 @@ if __name__ == "__main__":
 
     q_final_atomic = calculator.q_final_atomic
     print('Q Final Atomic:', q_final_atomic)
+
+    hamiltonian = calculator.hamiltonian
+    print('Hamiltonian:', hamiltonian)
+
+    forces = calculator.forces
+    print('forces:', forces)
