@@ -94,7 +94,7 @@ for key in h_feed._on_sites:
 #h_feed._on_sites["8"] = o_onsite
 
 # Get the 3 specific parameters for optimization
-params = [h_param, o_param_a, o_param_b]
+#params = [h_param, o_param_a, o_param_b]
 # Create the DFTB calculator
 dftb_calculator = Dftb2(h_feed, s_feed, o_feed, u_feed, r_feed, filling_scheme=None)
 
