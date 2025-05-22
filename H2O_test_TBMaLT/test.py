@@ -61,7 +61,7 @@ torch.manual_seed(4)  # Set random seed for reproducibility
 # For hydrogen (Z=1)
 h_onsite = h_feed._on_sites["1"].clone()
 h_onsite[0] = -torch.rand(1, dtype=torch.double, requires_grad=True)[0]  # x parameter
-h_onsite[1:4] = -torch.rand(1, dtype=torch.double, requires_grad=True)[0].repeat(3)  # y parameter
+#h_onsite[1:4] = -torch.rand(1, dtype=torch.double, requires_grad=True)[0].repeat(3)  # y parameter
 h_feed._on_sites["1"] = h_onsite
 
 # For oxygen (Z=8)
