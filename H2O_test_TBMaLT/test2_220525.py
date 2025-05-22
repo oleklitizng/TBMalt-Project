@@ -64,14 +64,16 @@ o_param_b = nn.Parameter(-torch.rand(1, dtype=torch.double))    # For O on-site[
 
 # Create parameters directly in the on_sites dictionaries
 # For hydrogen (Z=1)
+#h_onsite = torch.zeros_like(h_feed._on_sites["1"], dtype=torch.double, requires_grad=True)
 h_onsite = h_feed._on_sites["1"].clone()
-h_onsite[0] = h_param.squeeze()  # x parameter
+h_onsite[0] = h_param  # x parameter
 h_feed._on_sites["1"] = h_onsite
 
 # For oxygen (Z=8)
+#o_onsite = torch.zeros_like(h_feed._on_sites["8"], dtype=torch.double, requires_grad=True)
 o_onsite = h_feed._on_sites["8"].clone()
-o_onsite[0] = o_param_a.squeeze()  # a parameter
-o_onsite[1:4] = o_param_b.squeeze()  # b parameter (same value for positions 1, 2, 3)
+o_onsite[0] = o_param_a  # a parameter
+o_onsite[1:4] = o_param_b  # b parameter (same value for positions 1, 2, 3)
 h_feed._on_sites["8"] = o_onsite
 
 # Get the 3 specific parameters for optimization
@@ -99,6 +101,19 @@ for epoch in range(number_of_epochs):
     
     # Backward pass
     loss.backward(retain_graph=True)
+
+    if h_param.grad is not None:
+    print(f"Grad h_param: {h_param.grad.item()}")
+else:
+    print("Grad h_param: None")
+if o_param_a.grad is not None:
+    print(f"Grad o_param_a: {o_param_a.grad.item()}")
+else:
+    print("Grad o_param_a: None")
+if o_param_b.grad is not None:
+    print(f"Grad o_param_b: {o_param_b.grad.item()}")
+else:
+    print("Grad o_param_b: None")
     
     # Update parameters
     optimizer.step()
