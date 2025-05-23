@@ -69,3 +69,6 @@ if __name__ == "__main__":
 
     forces = calculator.forces
     print('forces:', forces)
+
+    homo_lumo = calculator.homo_lumo
+    print('homo_lumo:', homo_lumo)
